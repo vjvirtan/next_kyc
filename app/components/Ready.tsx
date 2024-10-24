@@ -7,6 +7,7 @@ import FindPersonForm from "./form/FindPersonForm";
 import HeaderComponent from "./HeaderComponent";
 import { LanguageSelection } from "./LanguageSelection";
 import CompanyDetails from "./Presentation/CompanyDetails";
+import Sanctions from "./form/Sanctions";
 
 const preLoad = () => {
   FetchAdvice();
@@ -39,6 +40,7 @@ export const Ready = (): React.JSX.Element => {
                 <FindPersonForm />
                 <EditPerson />
               </div>
+              <Sanctions />
             </div>
             <div></div>
           </div>
