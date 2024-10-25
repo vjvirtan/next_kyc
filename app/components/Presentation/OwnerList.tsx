@@ -48,20 +48,20 @@ function OwnerList() {
                 <>
                   <div
                     onClick={(e) => updatePerson(person!)}
-                    className={`${mainListStyle} grid grid-cols-5 ${isNew}`}
+                    className={`${mainListStyle} grid grid-cols-3 justify-evenly  md:whitespace-nowrap md:overflow-hidden  ${isNew}`}
                     key={person?.lastName}
                   >
-                    <div className={`${listItemStyle} flex gap-3  `}>
+                    <div className={`${listItemStyle}  gap-3 flex `}>
                       <div>{person?.lastName}</div>
                       <div>{person?.firstName}</div>
                     </div>
-                    <div className={`${listItemStyle} col-start-3`}>
+                    <div className={`${listItemStyle} justify-start `}>
                       <div>
                         {person?.personId}
                         <div className={selectAnimation}>select</div>
                       </div>
                     </div>
-                    <div className={`${listItemStyle} col-start-5`}>
+                    <div className={`${listItemStyle}  `}>
                       {e?.percentage} {" %"}
                     </div>
                   </div>

@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "http://localhost:8089/kyc";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 axios.defaults.baseURL = BASE_URL;
 
 export const useAxios = () => {

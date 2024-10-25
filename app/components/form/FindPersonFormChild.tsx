@@ -72,7 +72,7 @@ const FindPersonFormChild = () => {
           }}
         >
           {" "}
-          <div className='text-black'>Demo persons:</div>
+          <div className='text-black'>{translatePageText("demoInfo")}</div>
           <div id={"010101AXXXX"}>010101AXXXX</div>
           <div id={"020202AXXXX"}>020202AXXXX</div>
           <div id={"030303-XXXX"}>030303-XXXX</div>

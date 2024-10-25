@@ -1,4 +1,5 @@
-import { FetchResponse, URL, useFetch } from "./useFetch";
+import { FetchResponse, URL } from "../interface/FetchInterface";
+import { useFetch } from "./useFetch";
 interface BodyInterface {
   info?: string[];
   businessId: string;
@@ -16,7 +17,6 @@ const fResponse: FetchResponse = {
 
 const FetchSelections = () => {
   const { postData } = useFetch();
-
   const updateBoardMember = async (
     addRemove: boolean,
     id: string,

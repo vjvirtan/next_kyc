@@ -1,4 +1,3 @@
-"use client";
 import { UseCompany } from "@/app/contexts/CompanyContext";
 import React, { useState } from "react";
 import Validate, { Valid } from "./useValidate";

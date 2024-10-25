@@ -1,11 +1,6 @@
-import {
-  Advice,
-  KeyValue,
-  MainAdviceInterface,
-  UseAdviceContext,
-} from "../contexts/Advice";
-import { useLocalStorage } from "../service/useLocalStorage";
-import { FetchResponse, URL, useFetch } from "./useFetch";
+import { Advice, KeyValue, UseAdviceContext } from "../contexts/Advice";
+import { FetchResponse, URL } from "../interface/FetchInterface";
+import { useFetch } from "./useFetch";
 
 const fResponse: FetchResponse = {
   status: false,
@@ -16,9 +11,7 @@ const fResponse: FetchResponse = {
 };
 
 const FetchAdvice = async () => {
-  const { getFromLocalStorage } = useLocalStorage();
   const { getData } = useFetch();
-  let adviceData: MainAdviceInterface | null = null;
 
   const { useAdvice, setAdvice } = UseAdviceContext();
   const response = getData(URL + "/advice/all")

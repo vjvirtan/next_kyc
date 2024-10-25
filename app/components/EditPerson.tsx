@@ -1,5 +1,5 @@
 import FetchSelections from "../requests/FetchSelections";
-import { FetchResponse } from "../requests/useFetch";
+
 import { UseCompany } from "../contexts/CompanyContext";
 import { UsePersonsContex } from "../contexts/Person";
 import { UseReportContext } from "../contexts/Report";
@@ -8,6 +8,7 @@ import Benefiary from "./form/Benefiary";
 import Board from "./form/Board";
 import Shares from "./form/Shares";
 import PersonInfo from "./Presentation/PersonInfo";
+import { FetchResponse } from "../interface/FetchInterface";
 
 const EditPerson = () => {
   const { useCompany } = UseCompany();
@@ -63,10 +64,10 @@ const EditPerson = () => {
   const boardRoles = ["ceo", "headOfBoard", "boardMember", "deputyBoardMember"];
   const ready = (
     <>
-      <div className='flex bg-main-light border-2 rounded-lg border-base-dark m-3 p-2'>
+      <div className='flex justify-around bg-main-light  border-2 rounded-lg border-base-dark m-3 p-2'>
         <div>
           <PersonInfo />
-          <div className={`flex `}>
+          <div className={`flex justify-around `}>
             <Shares />
             <Benefiary />
           </div>

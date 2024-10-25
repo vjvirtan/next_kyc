@@ -57,10 +57,18 @@ export const LanguageSelection = () => {
 
   return (
     <>
-      <div className='flex text-black gap-2 align-bottom pl-2 pr-2 pt-1 pb-1 bg-orange-50 shadow-md shadow-orange-500 rounded-md'>
-        <div>{lang}</div>
-        <div onClick={(e) => handleClick(e)}>
-          <div className='flex gap-3'>{selected()}</div>
+      <div className='flex text-black gap-2 align-end pl-2 pr-2 pt-1 pb-1 justify-end'>
+        <div
+          className=' bg-orange-50 shadow-md pl-2 pr-2 pt-1 pb-1  shadow-orange-500 rounded-md md:whitespace-nowrap lg:whitespace-nowrap'
+          bg-orange-50
+          shadow-md
+          shadow-orange-500
+          rounded-md
+        >
+          <div>{lang}</div>
+          <div onClick={(e) => handleClick(e)}>
+            <div className='flex gap-3'>{selected()}</div>
+          </div>
         </div>
       </div>
     </>

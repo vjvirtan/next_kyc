@@ -1,5 +1,6 @@
 import { CompanyInterface } from "../contexts/CompanyContext";
-import { URL, useFetch } from "./useFetch";
+import { URL } from "../interface/FetchInterface";
+import { useFetch } from "./useFetch";
 
 const FetchCompany = async (id: string) => {
   const { postData } = useFetch();

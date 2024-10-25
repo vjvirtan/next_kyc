@@ -1,4 +1,3 @@
-"use client";
 import FetchSelections from "@/app/requests/FetchSelections";
 import { UseCompany } from "@/app/contexts/CompanyContext";
 import { PersonInterface, UsePersonsContex } from "@/app/contexts/Person";
@@ -46,19 +45,19 @@ const Benefiary = () => {
   return (
     <>
       <div
-        className={`
+        className={`flex-1
           m-2 rounded-md p-2 shadow-md shadow-main-primary content-center
           ${isBene ? selectedStyle : "bg-main-light"}`}
         onClick={(e) => changeBen(isBene!)}
       >
-        <div className='grid grid-cols-10 grid-rows-1 justify-self-start '>
-          <input
-            className='px-2 m-1 row-start-1 '
-            checked={isBene}
-            type='checkbox'
-            readOnly
-          ></input>
-          <div className='col-start-2 px-2 row-start-1 col-span-9 '>
+        <div className='justify-self-start  '>
+          <div className=' px-2 col-span-9 '>
+            <input
+              className='p-2 mr-2'
+              checked={isBene}
+              type='checkbox'
+              readOnly
+            ></input>
             {translatePageText("beneficiary")}
           </div>
         </div>

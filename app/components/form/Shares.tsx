@@ -86,18 +86,22 @@ const Shares = () => {
   };
   return (
     <>
-      <div className='m-2 rounded-md p-2 shadow-md shadow-main-primary'>
-        <label className={`${headerStyle}`}>{translatePageText("share")}</label>
-        <input
-          className='w-20  text-black  m-3 rounded ring-2 ring-orange-200 shadow-sm shadow-orange-300'
-          value={own == 0 ? "" : own}
-          onChange={(e) => {
-            addToLocalStorage("ownerTicket", Date.now());
-            onChangeOwner(e);
-          }}
-          type='number'
-        ></input>
-        %
+      <div className='flex-1 m-2 rounded-md p-2 shadow-md shadow-main-primary'>
+        <div className={`mt-1 ${headerStyle}`}>
+          {translatePageText("share")}
+        </div>
+        <div className='flex mt-2 ml-1'>
+          <input
+            className='w-20 pl-2 justify-items-end text-black  m-3 rounded ring-2 ring-orange-200 shadow-sm shadow-orange-300'
+            value={own == 0 ? "" : own}
+            onChange={(e) => {
+              addToLocalStorage("ownerTicket", Date.now());
+              onChangeOwner(e);
+            }}
+            type='number'
+          ></input>
+          <div className='pt-3'>%</div>
+        </div>
       </div>
     </>
   );

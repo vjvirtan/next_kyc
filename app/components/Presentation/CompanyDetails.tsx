@@ -16,24 +16,26 @@ const CompanyDetails = (): React.JSX.Element => {
 
   const details = (
     <>
-      <div className='gap-10 p-5 bg-main-primary rounded-md m-2'>
-        <div className=' rounded bg-orange-400  p-3'>
+      <div className='gap-10 p-5 bg-main-primary rounded-md m-2 '>
+        <div className=' rounded bg-orange-400  p-3 max-w-max '>
           <div className={`${labelStyle} grid grid-cols-3 `}>
-            <div className='row-start-1'>{translate("companyName")} </div>
+            <div className='row-start-1 px-3'>{translate("companyName")} </div>
             <div className={`${itemStyle} row-start-1 col-span-2`}>
               {useCompany?.name}
             </div>
           </div>
 
           <div className={`${labelStyle} grid grid-cols-3 `}>
-            <div className='row-start-1'>{translate("businessId")} </div>
+            <div className='row-start-1 px-3'>{translate("businessId")} </div>
             <div className={`${itemStyle} row-start-1 col-span-2`}>
               {useCompany?.businessId}
             </div>
           </div>
 
           <div className={`${labelStyle} grid grid-cols-3 `}>
-            <div className='row-start-1'>{translatePageText("address")} </div>
+            <div className='row-start-1 px-3'>
+              {translatePageText("address")}{" "}
+            </div>
             <div className={`${itemStyle} row-start-1 col-span-2`}>
               <div> {useCompany?.address}</div>
               <div>
@@ -48,7 +50,7 @@ const CompanyDetails = (): React.JSX.Element => {
               setCompany(null);
               setPerson((prev) => ({ ...prev, person: initPerson }));
             }}
-            className='rounded-3xl  text-white border-2 bg-green-900  p-2 content-center hover:border-orange-600'
+            className='rounded-xl  text-white border-2 bg-green-900  p-2 content-center hover:border-orange-600'
           >
             {translatePageText("done")?.toUpperCase()}
           </div>
@@ -63,7 +65,7 @@ const CompanyDetails = (): React.JSX.Element => {
                   person: initPerson,
                 }))
               }
-              className='rounded-3xl  text-white border-2 bg-green-900  shadow-sm shadow-green-500  p-2  content-center hover:border-orange-600'
+              className='rounded-xl  text-white border-2 bg-green-900  shadow-sm shadow-green-500  p-2  content-center hover:border-orange-600'
             >
               {" "}
               {translatePageText("addperson")?.toUpperCase()}

@@ -90,6 +90,15 @@ const InitialTranslations = (): KeyValue<
   );
   r.push(newTranslation("address", "Osoite", "Adress", "Address"));
 
+  r.push(
+    newTranslation(
+      "demoInfo",
+      "Voit ainoastaan käyttää listan demohenkilöitä:",
+      "Du kan endast använda listans demopersoner:",
+      "You can only use the demo persons in the list:"
+    )
+  );
+
   r.push(newTranslation("done", "Valmis", "Färdig", "Done"));
 
   r.push(newTranslation("share", "Omistus", "Aktieägande", "Share"));

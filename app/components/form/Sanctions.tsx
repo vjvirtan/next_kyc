@@ -7,12 +7,12 @@ const Sanctions = () => {
   const show = (
     <>
       <div
-        className='px-1 bg-base-mid flex justify-center
-       mt-5 border-solid border-y-2 border-base-dark 
-       max-h-10 text-white 
-       hover:bg-base-light  hover:text-black hover:ring-2 ring-red-200'
+        className='px-1 bg-base-mid flex justify-start
+       m-5 border-solid border-y-2 border-base-dark 
+      flex-1 lg:max-h-[15%] text-white 
+       hover:bg-base-light  hover:text-black hover:ring-2 ring-red-200 mr-4'
       >
-        <div className='m-1'> Check Sanctions</div>
+        <div className='m-1'>Check Sanctions</div>
         <label className='text-sm text-red-300'>offline</label>
       </div>
     </>

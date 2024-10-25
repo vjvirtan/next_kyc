@@ -11,7 +11,9 @@ const ReportCompany = () => {
       <div className={` ${backgroundListStyle}  `}>
         <BoardList />
       </div>
-      <div className={` ${backgroundListStyle} grid grid-rows-1 grid-cols-2 `}>
+      <div
+        className={` ${backgroundListStyle} grid grid-rows-1 lg:grid-cols-2 `}
+      >
         <OwnerList />
         <BeneficiaryList />
       </div>

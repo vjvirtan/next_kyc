@@ -1,6 +1,7 @@
 import { PersonInterface } from "../contexts/Person";
+import { FetchResponse, URL } from "../interface/FetchInterface";
 
-import { FetchResponse, URL, useFetch } from "./useFetch";
+import { useFetch } from "./useFetch";
 const fResponse: FetchResponse = {
   status: false,
   data: null,

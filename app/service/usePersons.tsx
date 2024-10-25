@@ -1,6 +1,7 @@
 import { PersonInterface, UsePersonsContex } from "../contexts/Person";
+import { FetchResponse } from "../interface/FetchInterface";
 import FetchPerson from "../requests/FetchPerson";
-import { FetchResponse } from "../requests/useFetch";
+import {} from "../requests/useFetch";
 
 const fetchResponse: FetchResponse = {
   status: false,

@@ -14,7 +14,7 @@ export default function Home() {
       <PersonContextProvider>
         <AdviceContextProvider>
           <ReportContextProvider>
-            <main className='px-12 pt-5'>
+            <main className='mt-5 sm:w-[95%] md:w-[90%] lg:w-[90%] xl:w-[85%] 2xl:w-[60%] justify-self-center'>
               <Ready />
             </main>
           </ReportContextProvider>

@@ -1,5 +1,6 @@
 import { UseReportContext } from "../contexts/Report";
-import { URL, useFetch } from "./useFetch";
+import { URL } from "../interface/FetchInterface";
+import { useFetch } from "./useFetch";
 const FetchReport = (businessId: string) => {
   const { postData } = useFetch();
   const { setReport } = UseReportContext();
