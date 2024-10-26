@@ -27,6 +27,7 @@ const useValidate = () => {
   const { useAdvice } = UseAdviceContext();
 
   const runValidation = async (field: string, input: any): Promise<Valid> => {
+    console.log(field, " ", input);
     return new Promise((resolve, reject) => {
       const rules = useAdvice.advice.find((e) => {
         if (e.key.toLowerCase() == field.toLowerCase()) {
@@ -79,6 +80,7 @@ const useValidate = () => {
       if (rules?.subString) {
         rules.subString.map((e) => {});
       }
+      console.log(validationErrors);
       resolve(
         validationErrors.length > 0 ? onError(validationErrors) : onValid()
       );

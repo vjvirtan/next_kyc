@@ -20,7 +20,9 @@ const FindPersonFormChild = () => {
   });
 
   const personInput = (event: string, fieldName: string) => {
-    runValidation(event, fieldName).then((response) => {
+
+    runValidation(fieldName, event).then((response) => {
+      console.log(response.validated);
       if (response.validated) {
         let personCheck: PersonInterface | undefined = checkPerson(event);
 
